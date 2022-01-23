@@ -5,17 +5,16 @@
         <meta name="viewport" content="width-device-width">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title> WebSite </title>
-        <link rel="stylesheet" href="css/ex001.css">
+        <link rel="stylesheet" href="css/ex002.css">
     </head>
     <body>
         <h1>Olá, mundo!</h1>
         <p>Já me livrei da maldição!</p>
         <script>
-
-            window.alert('Minha primeira mensagem!')
-            window.confirm('Está gostando de JS?')
-            window.prompt('Qual é o seu nome?')
-
+            var n1 = Number(window.prompt('Digite um número: '))
+            var n2 = Number(window.prompt('Digite outro número: '))
+            var s = n1 + n2
+            window.alert('A soma dos valores é ' + String(s))
         </script>
     </body>
 </html>
