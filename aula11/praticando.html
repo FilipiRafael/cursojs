@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite seu País Natal: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar Nacionalidade" id="botao" onclick="verificarNacionalidade()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="resultado">
+
+    </div>
+    <script>
+        function sair() {
+            botao = window.document.querySelector('input#botao')
+            botao.style.color = 'black'
+            botao.style.background = 'white'
+        }
+
+        function entrar() {
+            botao = window.document.querySelector('input#botao')
+            botao.style.background = "blue"
+            botao.style.color = 'white'
+        }
+
+        function verificarNacionalidade() {
+            var paisNatal = window.document.querySelector('input#pais').value
+            var resultado = window.document.querySelector('div#resultado')
+            resultado.innerHTML = `<p>Você está morando em: ${paisNatal}</p>`
+            if (paisNatal != 'BRASIL') {
+                resultado.innerHTML += `<p>Morando em ${paisNatal}, você é estrangeiro!</p>`
+            } else {
+                resultado.innerHTML += `<p>Morando em ${paisNatal}, você é Brasileiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
